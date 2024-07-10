@@ -1,6 +1,6 @@
 using Domain.User;
 
-namespace Application.Users.Queries.GetUsersList;
+namespace Application.Queries.GetUsersList;
 
 public class UsersListVm
 {

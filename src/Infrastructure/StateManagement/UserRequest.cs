@@ -7,7 +7,6 @@ public class UserRequest
     public int MessageId { get; }
     public long UserTelegramId { get; }
     public string Text { get; }
-    public string UserName { get; }
     public CallbackQuery? CallbackQuery { get; }
     public Update Request { get; }
 
@@ -23,10 +22,6 @@ public class UserRequest
             ?? throw new ArgumentException();
         Text =
             request.Message?.Text ?? request.CallbackQuery?.Data ?? throw new ArgumentException();
-        UserName =
-            request.Message?.Chat.FirstName
-            ?? request.CallbackQuery?.From.Username
-            ?? throw new ArgumentException();
         CallbackQuery = request.CallbackQuery;
         Request = request;
     }

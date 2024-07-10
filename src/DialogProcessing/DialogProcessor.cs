@@ -1,4 +1,5 @@
 using DialogProcessing.BotCommands;
+using DialogProcessing.BotCommands.Common;
 using Infrastructure.StateManagement;
 
 namespace DialogProcessing;

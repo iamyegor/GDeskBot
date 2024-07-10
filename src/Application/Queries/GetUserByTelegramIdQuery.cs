@@ -1,10 +1,9 @@
-using Application.Common;
 using Domain.User;
 using Infrastructure.Data;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace Application.Users.Queries;
+namespace Application.Queries;
 
 public class GetUserByTelegramId : IRequest<User?>
 {

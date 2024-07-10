@@ -1,5 +1,6 @@
 using System.Reflection;
 using DialogProcessing.BotCommands;
+using DialogProcessing.BotCommands.Common;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DialogProcessing;

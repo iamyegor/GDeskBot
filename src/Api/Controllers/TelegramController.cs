@@ -44,7 +44,7 @@ public class TelegramController : Controller
             return;
         }
 
-        if (request.EditedMessage != null)
+        if (request.Message?.Text == null)
         {
             return;
         }

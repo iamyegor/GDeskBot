@@ -2,7 +2,7 @@ using Infrastructure.Data;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace Application.Users.Queries.GetUsersList;
+namespace Application.Queries.GetUsersList;
 
 public class GetUsersListQuery : IRequest<UsersListVm>
 {

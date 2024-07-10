@@ -3,6 +3,7 @@ using System;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240710081153_Add_is_banned_to_user")]
+    partial class Add_is_banned_to_user
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,11 +38,6 @@ namespace Infrastructure.Migrations
                     b.Property<long>("TelegramId")
                         .HasColumnType("bigint")
                         .HasColumnName("telegram_id");
-
-                    b.Property<string>("TelegramUsername")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("telegram_username");
 
                     b.Property<int?>("TopicId")
                         .HasColumnType("integer")
