@@ -1,0 +1,5 @@
+/home/yegor/RiderProjects/OperatorsBot/migrator/HelpDeskMigrator/MigrationChanger/obj/Debug/net8.0/MigrationChanger.GeneratedMSBuildEditorConfig.editorconfig
+/home/yegor/RiderProjects/OperatorsBot/migrator/HelpDeskMigrator/MigrationChanger/obj/Debug/net8.0/MigrationChanger.AssemblyInfoInputs.cache
+/home/yegor/RiderProjects/OperatorsBot/migrator/HelpDeskMigrator/MigrationChanger/obj/Debug/net8.0/MigrationChanger.AssemblyInfo.cs
+/home/yegor/RiderProjects/OperatorsBot/migrator/HelpDeskMigrator/MigrationChanger/obj/Debug/net8.0/MigrationChanger.csproj.CoreCompileInputs.cache
+/home/yegor/RiderProjects/OperatorsBot/migrator/HelpDeskMigrator/MigrationChanger/obj/Debug/net8.0/MigrationChanger.sourcelink.json

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Migrator", "Migrator\Migrator.csproj", "{EC0C2CDF-4C65-46D8-8B70-77878C98A769}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigrationChanger", "MigrationChanger\MigrationChanger.csproj", "{B5DA2C4C-00C6-4F7C-944F-6DDA35E1889F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC0C2CDF-4C65-46D8-8B70-77878C98A769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC0C2CDF-4C65-46D8-8B70-77878C98A769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC0C2CDF-4C65-46D8-8B70-77878C98A769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC0C2CDF-4C65-46D8-8B70-77878C98A769}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5DA2C4C-00C6-4F7C-944F-6DDA35E1889F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5DA2C4C-00C6-4F7C-944F-6DDA35E1889F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5DA2C4C-00C6-4F7C-944F-6DDA35E1889F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5DA2C4C-00C6-4F7C-944F-6DDA35E1889F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
