@@ -40,7 +40,7 @@ public class Startup
         if (EnvironmentResolver.IsProduction)
         {
             botConfig.Token = Environment.GetEnvironmentVariable("BOT_TOKEN")!;
-            botConfig.HostAddress = Environment.GetEnvironmentVariable("SITE_ADDRESS")!;
+            botConfig.HostAddress = Environment.GetEnvironmentVariable("SITE_URL")!;
         }
 
         services.AddSingleton(botConfig);

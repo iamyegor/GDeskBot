@@ -1,0 +1,12 @@
+/home/yegor/RiderProjects/OperatorsBot/migrator/src/Common/bin/Debug/net8.0/Common.deps.json
+/home/yegor/RiderProjects/OperatorsBot/migrator/src/Common/bin/Debug/net8.0/Common.dll
+/home/yegor/RiderProjects/OperatorsBot/migrator/src/Common/bin/Debug/net8.0/Common.pdb
+/home/yegor/RiderProjects/OperatorsBot/migrator/src/Common/obj/Debug/net8.0/Common.GeneratedMSBuildEditorConfig.editorconfig
+/home/yegor/RiderProjects/OperatorsBot/migrator/src/Common/obj/Debug/net8.0/Common.AssemblyInfoInputs.cache
+/home/yegor/RiderProjects/OperatorsBot/migrator/src/Common/obj/Debug/net8.0/Common.AssemblyInfo.cs
+/home/yegor/RiderProjects/OperatorsBot/migrator/src/Common/obj/Debug/net8.0/Common.csproj.CoreCompileInputs.cache
+/home/yegor/RiderProjects/OperatorsBot/migrator/src/Common/obj/Debug/net8.0/Common.sourcelink.json
+/home/yegor/RiderProjects/OperatorsBot/migrator/src/Common/obj/Debug/net8.0/Common.dll
+/home/yegor/RiderProjects/OperatorsBot/migrator/src/Common/obj/Debug/net8.0/refint/Common.dll
+/home/yegor/RiderProjects/OperatorsBot/migrator/src/Common/obj/Debug/net8.0/Common.pdb
+/home/yegor/RiderProjects/OperatorsBot/migrator/src/Common/obj/Debug/net8.0/ref/Common.dll

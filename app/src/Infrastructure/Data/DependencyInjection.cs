@@ -13,9 +13,10 @@ public static class DependencyInjection
     {
         string connectionString = EnvironmentResolver.IsDevelopment
             ? configuration.GetConnectionString(ConnectionString.Name)!
-            : Environment.GetEnvironmentVariable(ConnectionString.Name)!;
+            : Environment.GetEnvironmentVariable("CONNECTION_STRING")!;
 
         services.AddScoped(_ => new ApplicationDbContext(connectionString));
+        services.AddLogging();
 
         return services;
     }
