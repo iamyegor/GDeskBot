@@ -5,6 +5,7 @@ using Infrastructure.Settings;
 using Infrastructure.StateManagement;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Telegram.Bot;
 using Telegram.Bot.Exceptions;
 using Telegram.Bot.Types;
@@ -17,16 +18,19 @@ public class MessageBotCommand : IBotCommand
     private readonly ApplicationDbContext _context;
     private readonly TelegramBotClient _client;
     private readonly IMediator _mediator;
+    private readonly ILogger<MessageBotCommand> _logger;
 
     public MessageBotCommand(
         ApplicationDbContext context,
         TelegramBotClient client,
-        IMediator mediator
+        IMediator mediator,
+        ILogger<MessageBotCommand> logger
     )
     {
         _context = context;
         _client = client;
         _mediator = mediator;
+        _logger = logger;
     }
 
     public async Task<bool> IsApplicable(UserRequest request, CancellationToken ct)
@@ -39,7 +43,7 @@ public class MessageBotCommand : IBotCommand
             cancellationToken: ct
         );
         
-        return isTexitingToBot && user?.IsBanned == false;
+        return isTexitingToBot && (user == null || user.IsBanned == false);
     }
 
     public async Task Execute(UserRequest request, CancellationToken ct)

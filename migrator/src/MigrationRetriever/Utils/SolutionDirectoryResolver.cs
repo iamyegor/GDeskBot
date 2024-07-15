@@ -1,4 +1,4 @@
-namespace Migrator.Utils;
+namespace MigrationRetriever.Utils;
 
 public class SolutionDirectoryResolver
 {

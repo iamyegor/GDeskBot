@@ -1,7 +1,8 @@
 using System.Diagnostics;
-using Common.AppEnvironment;
+using MigrationRetriever.AppEnvironment;
+using Serilog;
 
-namespace Migrator.Utils;
+namespace MigrationRetriever.Utils;
 
 public class ApplicationRunner
 {
@@ -42,10 +43,13 @@ public class ApplicationRunner
 
             buildProcess.WaitForExit();
 
+            Log.Information("BuildProccess: {@build}", buildProcess);
             if (buildProcess.ExitCode != 0)
             {
-                Console.WriteLine("Build failed:");
-                Console.WriteLine(buildError);
+                Console.WriteLine($"ExitCode: {buildProcess.ExitCode}");
+                Console.WriteLine($"Build output: {buildOutput}");
+                Console.WriteLine($"BuildError: {buildError}");
+                throw new Exception(buildError);
             }
             else
             {
@@ -78,8 +82,8 @@ public class ApplicationRunner
 
             if (!string.IsNullOrEmpty(runError))
             {
-                Console.WriteLine("Error from MigrationApplier:");
-                Console.WriteLine(runError);
+                Console.WriteLine($"RunError: {runError}");
+                throw new Exception(runError);
             }
         }
     }

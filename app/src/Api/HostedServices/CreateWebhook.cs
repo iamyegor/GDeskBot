@@ -31,16 +31,12 @@ public class CreateWebhook : IHostedService
     {
         if (!string.IsNullOrEmpty(_config.HostAddress))
         {
-            _logger.LogCritical($"Host address: {_config.HostAddress}");
-            _logger.LogCritical($"Webhook Token: {_config.WebhookToken}");
-
             InputFileStream? inputFileStream = null;
             if (EnvironmentResolver.IsProduction)
             {
                 string base64EncodedCert = Environment.GetEnvironmentVariable("PUBLIC_CERT")!;
                 byte[] certBytes = Convert.FromBase64String(base64EncodedCert);
-
-                using MemoryStream stream = new MemoryStream(certBytes);
+                MemoryStream stream = new MemoryStream(certBytes);
                 inputFileStream = new InputFileStream(stream, "cert.pem");
             }
 

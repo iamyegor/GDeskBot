@@ -16,20 +16,19 @@ public class TelegramController : Controller
 {
     private readonly BotConfiguration _configuration;
     private readonly TelegramBotClient _telegramBotClient;
-    private readonly ILogger _logger;
+    private readonly ILogger<TelegramController> _logger;
     private readonly DialogProcessor _dialogProcessor;
 
     public TelegramController(
         BotConfiguration configuration,
         TelegramBotClient telegramBotClient,
-        ILoggerFactory logger,
-        DialogProcessor dialogProcessor
-    )
+        DialogProcessor dialogProcessor,
+        ILogger<TelegramController> logger)
     {
         _configuration = configuration;
         _telegramBotClient = telegramBotClient;
         _dialogProcessor = dialogProcessor;
-        _logger = logger.CreateLogger(typeof(TelegramController));
+        _logger = logger;
     }
 
     [HttpPost("{token?}")]

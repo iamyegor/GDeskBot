@@ -1,5 +1,5 @@
-using Common.AppEnvironment;
 using Microsoft.EntityFrameworkCore;
+using MigrationApplier.AppEnvironment;
 
 namespace MigrationApplier;
 

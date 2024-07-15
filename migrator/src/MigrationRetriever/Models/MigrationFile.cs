@@ -1,4 +1,4 @@
-namespace Migrator.Models;
+namespace MigrationRetriever.Models;
 
 public class MigrationFile
 {

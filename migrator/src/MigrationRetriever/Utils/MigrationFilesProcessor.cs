@@ -1,6 +1,6 @@
-using Migrator.Models;
+using MigrationRetriever.Models;
 
-namespace Migrator.Utils;
+namespace MigrationRetriever.Utils;
 
 public class MigrationFilesProcessor
 {

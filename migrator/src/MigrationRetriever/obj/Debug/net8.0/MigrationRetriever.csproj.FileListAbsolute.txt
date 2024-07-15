@@ -31,3 +31,7 @@
 /home/yegor/RiderProjects/OperatorsBot/migrator/src/MigrationRetriever/obj/Debug/net8.0/ref/MigrationRetriever.dll
 /home/yegor/RiderProjects/OperatorsBot/migrator/src/MigrationRetriever/bin/Debug/net8.0/Common.dll
 /home/yegor/RiderProjects/OperatorsBot/migrator/src/MigrationRetriever/bin/Debug/net8.0/Common.pdb
+/home/yegor/RiderProjects/OperatorsBot/migrator/src/MigrationRetriever/bin/Debug/net8.0/Serilog.dll
+/home/yegor/RiderProjects/OperatorsBot/migrator/src/MigrationRetriever/bin/Debug/net8.0/Serilog.Sinks.File.dll
+/home/yegor/RiderProjects/OperatorsBot/migrator/src/MigrationRetriever/bin/Debug/net8.0/Serilog.Extensions.Logging.dll
+/home/yegor/RiderProjects/OperatorsBot/migrator/src/MigrationRetriever/bin/Debug/net8.0/Serilog.Sinks.Console.dll

@@ -1,7 +1,7 @@
 using System.Net.Http.Json;
-using Migrator.Models;
+using MigrationRetriever.Models;
 
-namespace Migrator.Utils;
+namespace MigrationRetriever.Utils;
 
 public class MigrationFilesResolver
 {

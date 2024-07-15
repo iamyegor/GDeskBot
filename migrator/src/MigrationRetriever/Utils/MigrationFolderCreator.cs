@@ -1,7 +1,7 @@
-using Common.AppEnvironment;
-using Migrator.Models;
+using MigrationRetriever.AppEnvironment;
+using MigrationRetriever.Models;
 
-namespace Migrator.Utils;
+namespace MigrationRetriever.Utils;
 
 public class MigrationFolderCreator
 {
