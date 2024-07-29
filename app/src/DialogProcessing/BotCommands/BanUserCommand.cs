@@ -24,8 +24,8 @@ public class BanUserCommand : IBotCommand
     public Task<bool> IsApplicable(UserRequest request, CancellationToken ct)
     {
         bool isGroup = request.Request.Message?.Chat.Id == Settings.GroupId;
-        bool hasCloseMessage = request.Text == AdminCommandNames.Ban;
-        return Task.FromResult(isGroup && hasCloseMessage);
+        bool hasBanMessage = request.Text == AdminCommandNames.Ban;
+        return Task.FromResult(isGroup && hasBanMessage);
     }
 
     public async Task Execute(UserRequest request, CancellationToken ct)

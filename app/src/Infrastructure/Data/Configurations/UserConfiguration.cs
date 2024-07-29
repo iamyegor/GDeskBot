@@ -13,6 +13,9 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(x => x.TelegramId).HasColumnName("telegram_id");
         builder.Property(x => x.TopicId).HasColumnName("topic_id").IsRequired(false);
         builder.Property(x => x.IsBanned).HasColumnName("is_banned");
-        builder.Property(x => x.TelegramUsername).HasColumnName("telegram_username");
+        builder
+            .Property(x => x.TelegramUsername)
+            .HasColumnName("telegram_username")
+            .IsRequired(false);
     }
 }

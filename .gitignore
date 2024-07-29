@@ -1,19 +1,7 @@
 # ASP.NET core
 # Built application files
-*/[Bb]in/
-*/[Oo]bj/
-
-src/*/[Bb]in/
-src/*/[Oo]bj/
-
-test/*/[Bb]in/
-test/*/[Oo]bj/
-
-server/src/*/[Bb]in/
-server/src/*/[Oo]bj/
-
-server/test/*/[Bb]in/
-server/test/*/[Oo]bj/
+**/[Bb]in/
+**/[Oo]bj/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/

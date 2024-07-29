@@ -1,10 +1,8 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using Infrastructure.Utils;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 
@@ -14,17 +12,11 @@ public class CreateWebhook : IHostedService
 {
     private readonly BotConfiguration _config;
     private readonly TelegramBotClient _telegramBotClient;
-    private readonly ILogger<CreateWebhook> _logger;
 
-    public CreateWebhook(
-        BotConfiguration config,
-        TelegramBotClient telegramBotClient,
-        ILogger<CreateWebhook> logger
-    )
+    public CreateWebhook(BotConfiguration config, TelegramBotClient telegramBotClient)
     {
         _config = config;
         _telegramBotClient = telegramBotClient;
-        _logger = logger;
     }
 
     public async Task StartAsync(CancellationToken cancellationToken)
@@ -34,10 +26,14 @@ public class CreateWebhook : IHostedService
             InputFileStream? inputFileStream = null;
             if (EnvironmentResolver.IsProduction)
             {
-                string base64EncodedCert = Environment.GetEnvironmentVariable("PUBLIC_CERT")!;
-                byte[] certBytes = Convert.FromBase64String(base64EncodedCert);
-                MemoryStream stream = new MemoryStream(certBytes);
-                inputFileStream = new InputFileStream(stream, "cert.pem");
+                string certFilePath = "/pub-certs/cert.pem";
+                Stream certFileStream = new FileStream(
+                    certFilePath,
+                    FileMode.Open,
+                    FileAccess.Read
+                );
+
+                inputFileStream = new InputFileStream(certFileStream);
             }
 
             await _telegramBotClient.SetWebhookAsync(

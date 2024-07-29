@@ -37,7 +37,6 @@ namespace Infrastructure.Migrations
                         .HasColumnName("telegram_id");
 
                     b.Property<string>("TelegramUsername")
-                        .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("telegram_username");
 
