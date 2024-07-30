@@ -1,0 +1,27 @@
+volumes:
+  ekmek-vol:
+
+services:
+  db:
+    image: postgres:16
+    restart: always
+    ports: 
+      - 34888:5432
+    volumes:
+      - ekmek-vol:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: bot_db
+      POSTGRES_USER: ps_user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_INITDB_ARGS: --auth=scram-sha-256
+  app:
+    build: app
+    ports:
+      - 1402:8080
+    environment:
+      CONNECTION_STRING: Host=localhost;Port=34888;Database=bot_db;Username=ps_user;Password=pass
+      HELP_DESK_BOT_TOKEN: ${HELP_DESK_BOT_TOKEN} 
+      SITE_URL: 
+  migrator:
+    build: migrator
+    ports: 
